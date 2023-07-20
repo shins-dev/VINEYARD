@@ -1,0 +1,93 @@
+.dateofweek {
+  background: url(../images/date-bg.png) lightgray 50% / cover no-repeat;
+  height: 715px;
+  padding-top: 100px;
+}
+
+.dateofweek {
+  &-main {
+    position: relative;
+  }
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &-date-list {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 60px;
+  }
+  &-date-item {
+    height: 140px;
+    width: 100px;
+    background: url(../images/date-bg-item.png) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  &-button {
+    button {
+      border: 1px solid $bl36-color;
+      letter-spacing: 2px;
+    }
+  }
+  &-slider {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  &-list {
+    max-width: 375px;
+    max-height: 510px;
+    background-color: $ff-color;
+  }
+  &-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    cursor: pointer;
+  }
+}
+.dateofweek-desc {
+  max-width: 770px;
+  margin-bottom: 35px;
+  p {
+    font-size: 16px;
+  }
+}
+.line {
+  border-bottom: 1px dashed $a5-color;
+  padding-bottom: 20%;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 20px;
+  list-style-type: none;
+  padding-bottom: 30px;
+}
+.slick-dots button {
+  list-style-type: none;
+  border: 1px solid rgb(231, 218, 218);
+  border-radius: 100rem;
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 100rem;
+}
+/* Ẩn các điểm chỉ thứ 4 trở đi */
+.slick-dots li:nth-child(n + 4) {
+  display: none;
+}
+.slick-active button {
+  border: 1px solid $a5-color;
+}

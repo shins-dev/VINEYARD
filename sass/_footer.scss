@@ -1,0 +1,156 @@
+.cart {
+  background-color: #252525;
+  padding: 20px 0;
+}
+
+.cart {
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.icon-infor {
+  font-size: 16px;
+  color: gray;
+  margin-right: 50px;
+  &:hover {
+    color: $ff-color;
+  }
+}
+.icon-arrow {
+  font-size: 30px;
+  color: $a5-color;
+  &:hover {
+    cursor: pointer;
+    color: $ff-color;
+  }
+}
+
+.icon-cards {
+  background-color: #898989;
+  margin-left: 10px;
+  width: 37px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  i {
+    font-size: 25px;
+    color: #252525;
+  }
+}
+// infor - content
+
+.footer {
+  &-center {
+    background-color: #111111;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  &-center-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-center-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 350px;
+    gap: 25px 0;
+    h2 {
+      margin-bottom: 5px;
+      font-size: 36px;
+      font-weight: bold;
+      color: $a5-color;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+    a {
+      span,
+      p {
+        color: #898989;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        &:hover {
+          color: $ff-color;
+        }
+      }
+    }
+    h3 {
+      color: $ff-color;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      padding-top: 18px;
+    }
+  }
+}
+.tag {
+  &-clound {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    a {
+      padding: 10px 25px;
+      border: 1px solid #292929;
+    }
+  }
+}
+
+// menu
+
+.footer {
+  &-bottoms {
+    background-color: #111111;
+  }
+  &-bottom {
+    border-bottom: 1px solid #292929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    gap: 0 25px;
+  }
+
+  &-bottom-item {
+    list-style-type: none;
+    border-right: 1px solid #898989;
+    &:last-child {
+      border: none;
+    }
+  }
+  &-bottom-link {
+    padding-right: 25px;
+    font-size: 12px;
+    color: #898989;
+    letter-spacing: 4px;
+    font-weight: 400;
+  }
+}
+
+.copyright {
+  background-color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  p {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 20px 0 100px 0;
+    color: #898989;
+    letter-spacing: 3px;
+    span {
+      color: $a5-color;
+    }
+  }
+}
+
+// menu - footer

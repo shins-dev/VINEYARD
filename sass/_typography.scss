@@ -1,0 +1,97 @@
+.text{
+  font-size: 16px;
+  font-weight: 400;
+  &-header{
+    font-size: 32px;
+    color: $a5-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px ;
+  }
+  &-nav{
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    color: $ff-color;
+  }
+  &-hero-button{
+    font-size: 13px;
+    font-weight: bold;
+    color: $ff-color;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  &-heading{
+    font-size: 36px;
+    font-weight: 400;
+    color: $a5-color;
+    letter-spacing: 5px;
+    font-family: $font-Pinyon;
+  }
+  &-title{
+    font-size: 36px;
+    font-weight: bold;
+    color: $bl36-color;
+    letter-spacing: 5px;
+  
+  }
+  &-fz36C{
+    font-size: 36px;
+    font-weight: 200;
+    color: $a5-color;
+    letter-spacing: 5px;
+    font-family: $font-Cinzel;
+    padding-bottom: 40px;
+  }
+  &-text-f14{
+    font-weight: 400;
+    font-size: 16px;
+    color: $bl36-color;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+  &-fz14{
+    font-weight: 400;
+    font-size: 14px;
+    color: $bl36-color;
+    text-transform: capitalize;
+  }
+  &-jose-f14{
+    font-size: 14px;
+    font-weight: 500;
+    color: #898989;
+    font-family: $font-Josefin;
+    text-transform: uppercase;
+  }
+  &-cin-f30{
+    font-size: 30px;
+    font-weight: 900;
+    color: $bl36-color;
+    font-family: $font-Cinzel;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  &-fz24{
+    font-size: 24px;
+    font-weight: 400;
+    color: $bl36-color;
+    letter-spacing: 3px;
+  }
+  &-fz24C{
+    font-size: 24px;
+    font-weight: bold;
+    color: $ff-color;
+    letter-spacing: 5px;
+    font-family: $font-Cinzel;
+    padding-bottom: 25px;
+  }
+  &-fz18{
+    font-family: $font-Josefin;
+    font-size: 18px;
+    color: #b7b7b7;
+    letter-spacing: 4px;
+    font-weight: 300;
+  }
+}
+.uppercase{
+  text-transform: uppercase;
+}

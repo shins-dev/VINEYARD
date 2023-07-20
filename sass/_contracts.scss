@@ -1,0 +1,58 @@
+.contract{
+  background-color:#f4f6f9;
+  z-index: 99;
+}
+.welcome {
+  &-contact {
+    padding-top: 520px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  &-item {
+    width: 390px;
+    max-height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px 0;
+    padding: 40px 50px;
+    margin-bottom: 100px;
+    p,
+    i {
+      font-size: 24px;
+      font-weight: bold;
+      color: $bl36-color;
+    }
+    &:nth-child(2) {
+      box-shadow: -5px 0px 5px -5px grey, 5px 0px 5px -5px grey;
+    }
+  }
+  &-item-title {
+    font-size: 18px;
+    color: #898989;
+    letter-spacing: 3px;
+    font-style: italic;
+  }
+  &-item-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 30px;
+    a {
+      width: 35px;
+      height: 35px;
+      border-radius: 100rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+      background-color: $bl36-color;
+      i {
+        color: $ff-color;
+        font-size: 16px;
+      }
+    }
+  }
+}

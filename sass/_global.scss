@@ -1,0 +1,26 @@
+body {
+  font-family: $font-Philosopher;
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+}
+.wraper {
+  width: 100%;
+  margin: 0 auto;
+}
+.main{
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 75px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.button{
+  padding: 12px 40px;
+  border: 2px solid #d2d3d6;
+  border-radius: 50px;
+}

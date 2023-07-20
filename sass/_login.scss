@@ -1,0 +1,136 @@
+.wraper{
+  position: relative;
+
+  
+}
+.register {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(96, 96, 108, 0.5);
+  left: 50%;
+  top: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(96, 96, 108, 0.5);
+  left: 50%;
+  top: 0;
+  transform: translateX(100%);
+  transition: all 0.2s ease-in-out;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+ 
+  &-register{
+    width: 300px;
+    max-height: 375px;
+    padding: 30px;
+    background-color: $ff-color;
+    
+}
+  &-login{
+    width: 300px;
+    max-height: 375px;
+    padding: 30px;
+    background-color: $ff-color;
+}
+  &-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    h2{
+      font-size: 24px;
+      font-weight: bold;
+      color: $bl36-color;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+    i{
+      font-size: 20px;
+    }
+}
+  &-content{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    gap: 50px;
+    input{
+      padding-bottom: 20px;
+      border: none;
+      border-bottom: 1px solid #e5e5e5 ;
+     
+    }
+  }
+  &-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    button{
+      background-color: $a5-color;
+      outline: none;
+      border: none;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+      color: $ff-color;
+  
+    }
+}
+  &-infor{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a{
+      color: #a1a1a1;
+      span{
+        font-size: 14px;
+        font-weight: 400;
+        
+      }
+    }
+}
+}
+
+@media (hover: hover) {
+  .login-infor{
+    & :hover{
+    color: rgb(62, 62, 239);
+    }
+  }
+  .login-title {
+    &:hover i{
+      color: $a5-color;
+      cursor: pointer;
+    }
+  }
+
+
+}
+
+.active {
+  opacity: 1;
+  visibility: inherit;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}

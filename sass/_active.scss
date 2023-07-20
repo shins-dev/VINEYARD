@@ -1,0 +1,120 @@
+.active {
+  &-setting {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(20%); 
+    position: absolute;
+    top: 90px;
+    left: 0;
+    max-width: 170px;
+    max-height: 490px;
+    z-index: 9;
+  }
+  &-main {
+    border-top: 1px dashed $a5-color;
+    background-color: $ff-color;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.section {
+  &-shoping {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+    margin-bottom: 10px;
+  }
+  &-currency {
+    border-top: 1px solid #e5e5e5;
+    padding: 20px 30px;
+    display: flex;
+    gap: 20px 0;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+  &-currency-titles {
+    padding-top: 10px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  &-check {
+    display: flex;
+    gap: 0 15px;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    input {
+      width: 16px;
+      height: 16px;
+      border-radius: 100rem;
+      background-color: $bl36-color;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    input[type="radio"]:checked + label::before {
+      background-color: $bl36-color;
+    }
+    label::before {
+      content: "";
+      position: absolute;
+      top: -1.5px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #000;
+      border-radius: 50%;
+    }
+  }
+
+  &-languge {
+    padding: 20px 30px;
+    display: flex;
+    border-top: 1px solid #e5e5e5;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &-languge-image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    a {
+      width: 33px;
+      height: 23px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .section-check {
+    &:hover {
+      cursor: pointer !important;
+    }
+    &:hover input[type="radio"] + label::before {
+      background-color: $bl36-color;
+    }
+  }
+}
+
+
+.is-show {
+  opacity: 1;
+  visibility: inherit;
+  transform: translateY(0);
+}

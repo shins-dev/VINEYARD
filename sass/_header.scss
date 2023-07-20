@@ -1,0 +1,23 @@
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 0 50px;
+}
+.header {
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    position: relative;
+  }
+  &-icon {
+    font-size: 30px;
+    color: $bl36-color;
+  }
+  &-menu {
+    &-item {
+      list-style-type: none;
+    }
+  }
+}
