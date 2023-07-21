@@ -2,32 +2,36 @@
   position: relative;
 }
 .register {
+  top: 0;
+  position: absolute;
   width: 100%;
   height: 100vh;
-  position: absolute;
-  background-color: rgba(96, 96, 108, 0.5);
-  left: 50%;
-  top: 0;
-  transform: translateX(100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: #dad7d7, $alpha: 0.5);
   transition: all 0.3s ease-in-out;
+  transform: translateX(-100%);
   display:flex;
   align-items:center;
   justify-content:center;
   flex-direction:column;
-  z-index: 10;
   opacity: 0;
   visibility: hidden;
+  z-index: 10;
 }
 
 .login {
+  top: 0;
+  position: absolute;
   width: 100%;
   height: 100vh;
-  position: absolute;
-  background-color: rgba(96, 96, 108, 0.5);
-  left: 50%;
-  top: 0;
-  transform: translateX(100%);
-  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: #dad7d7, $alpha: 0.5);
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-100%);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -35,7 +39,6 @@
   opacity: 0;
   visibility: hidden;
   z-index: 10;
- 
   &-register{
     width: 300px;
     max-height: 375px;
@@ -130,5 +133,6 @@
   opacity: 1;
   visibility: inherit;
   transition: all 0.3s ease-in-out;
-  transform: translateX(-50%);
+  transform: translate(0);
+  overflow: hidden;
 }
