@@ -6,7 +6,7 @@
   right: 0;
   z-index: 10;
   transition: all 0.3s ease-in-out;
-  transform: translateX(100%);
+  transform: translateY(60px);
   opacity: 0;
   visibility: hidden;
 
@@ -126,5 +126,5 @@
   opacity: 1;
   visibility: inherit;
   transition: all 0.3s ease-in-out;
-  transform: translateX(0);
+  transform: translate(0);
 }

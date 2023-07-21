@@ -255,6 +255,188 @@ body {
     color: #a53e4c;
   }
 }
+.submenu {
+  background-color: #ffffff;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  padding: 50px 70px;
+  display: flex;
+  left: -100%;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(50px);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+.submenu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.submenu-list-item {
+  display: flex;
+  justify-content: space-between;
+  width: 430px;
+  height: 280px;
+}
+.submenu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.submenu-header {
+  position: relative;
+}
+.submenu-header h3 {
+  max-width: 150px;
+  color: #363636;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+}
+.submenu-header ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 33.33%;
+  height: 2px;
+  border-bottom: 1px dashed #a53e4c;
+}
+.submenu-item {
+  list-style-type: none;
+  max-width: 170px;
+}
+.submenu-link {
+  color: #898989;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.submenu-bg {
+  width: 230px;
+  height: 280px;
+  background: url(../images/submenu-bg.png) lightgray 50%/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+.submenu-bg1 {
+  width: 230px;
+  height: 280px;
+  background: url(../images/submenu-bg1.png) lightgray 50%/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+.submenu-title {
+  font-size: 24px;
+  color: #a53e4c;
+  font-family: "Pinyon Script", cursive;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+.submenu-desc {
+  font-size: 24px;
+  color: #ffffff;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menu-home, .menu-shop {
+  position: relative;
+}
+.menu-home::before, .menu-shop::before {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: -100px;
+  height: 30px;
+  width: 100%;
+  background-color: #a53e4c;
+  opacity: 0;
+}
+
+.submenushop {
+  background-color: #ffffff;
+}
+
+.submenushop {
+  position: absolute;
+  top: 100%;
+  padding: 50px 70px;
+  display: flex;
+  left: -100%;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(50px);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+.submenushop-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+.submenushop-list-item {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+.submenushop-items {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.submenushop-item {
+  width: 100px;
+}
+
+@media (hover: hover) {
+  .submenu-item:hover, .submenu-link:hover {
+    color: #a53e4c;
+    padding-left: 5px;
+  }
+  .submenu:hover, .submenushop:hover {
+    opacity: 1;
+    visibility: inherit;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(30px);
+  }
+  .menu-home:hover ~ .submenu {
+    opacity: 1;
+    visibility: inherit;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(30px);
+  }
+  .menu-shop:hover ~ .submenushop {
+    opacity: 1;
+    visibility: inherit;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(30px);
+  }
+}
 .welcome {
   position: relative;
 }
@@ -1285,7 +1467,6 @@ body {
   visibility: inherit;
   transition: all 0.3s ease-in-out;
   transform: translate(0);
-  overflow: hidden;
 }
 
 .hover-cart {
@@ -1294,7 +1475,7 @@ body {
   right: 0;
   z-index: 10;
   transition: all 0.3s ease-in-out;
-  transform: translateX(100%);
+  transform: translateY(60px);
   opacity: 0;
   visibility: hidden;
 }
@@ -1408,7 +1589,7 @@ body {
   opacity: 1;
   visibility: inherit;
   transition: all 0.3s ease-in-out;
-  transform: translateX(0);
+  transform: translate(0);
 }
 
 .search {
