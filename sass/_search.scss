@@ -1,0 +1,112 @@
+
+.search {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: #dad7d7, $alpha: 0.5);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  &-main {
+    background-color: $ff-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1170px;
+    max-height: 200px;
+    position: relative;
+    padding: 100px 200px;
+  }
+  &-main-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+  }
+  &-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    input {
+      padding: 18px 40px;
+      width: 500px;
+      border: none;
+      box-shadow: 0 0 0 1px rgb(228, 226, 226);
+      font-size: 18px;
+      padding-right: 60px;
+      &::placeholder {
+        letter-spacing: 3px;
+        color: #c1bdbdb6;
+      }
+    }
+  }
+  &-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    i {
+      color: $bl36-color;
+    }
+  }
+}
+.select {
+  &-infor {
+    border: none;
+    padding: 22px 40px;
+    background-color: $a5-color;
+    color: $ff-color;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 60px;
+    cursor: pointer;
+  }
+  &-infors {
+    position: relative;
+  }
+  &-infor-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: $ff-color;
+    font-size: 18px;
+  }
+}
+.search-show{
+  opacity: 1;
+  visibility: inherit;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+  overflow: hidden;
+}
+@media (hover: hover) {
+  .search-icon {
+    a {
+      i {
+        &:hover{
+          color: $a5-color;
+        }
+      }
+    }
+  }
+  .search-main-icon{
+    i {
+      &:hover {
+        color: $a5-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

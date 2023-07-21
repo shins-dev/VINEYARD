@@ -30,6 +30,32 @@ $(document).ready(function () {
       activeSettingVisible = false;
     }
   });
+  //show cart
+  var cartVisible = false;
+  $(".icofont-bag-alt").click(function (event) {
+    event.stopPropagation();
+    cartVisible = !cartVisible;
+    if (cartVisible) {
+      $(".hover-cart").addClass("cart-shows");
+    } else {
+      $(".hover-cart").removeClass("cart-shows");
+    }
+  });
+
+  $(document).click(function (event) {
+    if (!$(event.target).closest(".hover-cart").length) {
+      $(".hover-cart").removeClass("cart-shows");
+      cartVisible = false;
+    }
+  });
+  // sreach
+  $(".search-active").click(function(event) {
+    event.stopPropagation();
+    $(".search").toggleClass("search-show");
+  });
+  $(".fa-x").click(function() {
+    $(".search").removeClass("search-show");
+  });
   // login - reseter 
   //thêm active
   $(".fa-user").click(function(event) {
@@ -48,8 +74,11 @@ $(document).ready(function () {
     $(".register").removeClass("active");
     $(".login").addClass("active");
   });
+
+
+
    // Ngăn chặn sự kiện cuộn chuột
-   $(".login , .register").on("wheel", function(event) {
+   $(".login , .register, .search").on("wheel", function(event) {
     event.preventDefault();
   });
   

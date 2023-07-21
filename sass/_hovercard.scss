@@ -1,0 +1,130 @@
+
+.hover {
+  &-cart{
+  position: absolute;
+  top:90px;
+  right: 0;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+
+}
+  &-cart-main{
+    width: 290px;
+    max-height: 580px;
+    background-color: $ff-color;
+  }
+  &-cart-list{
+    padding: 30px;
+    border-top: 1px dashed $a5-color;
+    border-bottom: 1px dashed $a5-color;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  &-cart-item{
+    display:flex;
+    justify-content: space-between;
+    gap: 0 20px;
+ 
+}
+  &-cart-image{
+    width: 70px;
+    height: 90px;
+    box-shadow: 0 0 0 1px rgb(145, 144, 137);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor: pointer;
+   
+}
+  &-cart-title{
+    max-width: 140px;
+    h3{
+      font-size: 14px;
+      font-weight: 400;
+      color: $bl36-color;
+      letter-spacing: 1px;
+      padding-bottom: 10px;
+      line-height: 24px;
+      text-transform: capitalize;
+    }
+    p{
+      font-size: 14px;
+      font-weight: bold;
+      color: #a53e4c;
+    }
+}
+  &-cart-icon{
+    padding-top: 20px;
+}
+  &-cart-tottal{
+    padding: 30px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    h3{
+      font-size: 14px;
+      font-weight: bold;
+      color: $bl36-color;
+      letter-spacing: 1px;
+      padding-bottom: 10px;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+    p{
+      font-size: 14px;
+      font-weight: bold;
+      color: #a53e4c;
+      letter-spacing: 1px;
+    }
+}
+  &-cart-button{
+    padding:0 30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap: 10px;
+    padding-bottom: 30px;
+    button{
+      width: 100%;
+    }
+}
+}
+@media (hover: hover) {
+  .hover-cart-button {
+      button {
+        &:hover {
+          background-color: #a53e4c;
+          color: $ff-color;
+        }
+      }
+  }
+}
+.button-over{
+  border: none;
+  background-color: #a53e4c;
+  color: $ff-color;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+.button-even{
+  box-shadow: 0 0 0 1px #111111;
+  border: none;
+  background-color: $ff-color;
+  color: black;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.cart-shows{
+  opacity: 1;
+  visibility: inherit;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(0);
+}
