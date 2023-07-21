@@ -9,7 +9,7 @@
   top: 100%;
   padding: 50px 70px;
   display: flex;
-  left: -100%;
+  left: -500%;
   background-color: $ff-color;
   transition: all 0.3s ease-in-out;
   transform: translateY(50px);
@@ -100,7 +100,9 @@
     font-weight: bold;
   }
 }
-.menu-home ,.menu-shop {
+.menu-home,
+.menu-shop ,
+.menu-page {
   position: relative;
   &::before {
     content: " ";
@@ -127,15 +129,13 @@
   top: 100%;
   padding: 50px 70px;
   display: flex;
-  left: -100%;
+  left: -930%;
   background-color: $ff-color;
   transition: all 0.3s ease-in-out;
   transform: translateY(50px);
   z-index: 2;
   opacity: 0;
   visibility: hidden;
-  &-main {
-  }
   &-list {
     display: flex;
     justify-content: space-between;
@@ -158,15 +158,46 @@
   }
 }
 
-@media (hover: hover) {
-  .submenu-item ,.submenu-link{
-      &:hover {
-        color: $a5-color;
-        padding-left: 5px;
-      }
-    
+// pages
+.submenupages {
+  padding: 30px 60px 30px 20px;
+  background-color: $ff-color;
+  position: absolute;
+  top: 100%;
+  display: flex;
+  left: 0;
+  background-color: $ff-color;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(50px);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  &-items {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
   }
-  .submenu ,  .submenushop {
+  &-item {
+    width: 80px;
+  }
+}
+.text-page{
+  color: $bl36-color;
+}
+
+@media (hover: hover) {
+  .submenu-item,
+  .submenu-link {
+    &:hover {
+      color: $a5-color;
+      padding-left: 5px;
+    }
+  }
+  .submenu,
+  .submenushop,
+  .submenupages {
     &:hover {
       opacity: 1;
       visibility: inherit;
@@ -183,9 +214,18 @@
   .menu-shop:hover ~ .submenushop {
     opacity: 1;
     visibility: inherit;
-
     transition: all 0.2s ease-in-out;
     transform: translateY(30px);
   }
-  
+  .menu-page:hover ~ .submenupages{
+    opacity: 1;
+    visibility: inherit;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(30px);
+  }
+  .menu-item {
+    &:hover > a {
+      color: $a5-color;
+    }
+  }
 }

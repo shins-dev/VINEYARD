@@ -268,7 +268,7 @@ body {
   top: 100%;
   padding: 50px 70px;
   display: flex;
-  left: -100%;
+  left: -500%;
   background-color: #ffffff;
   transition: all 0.3s ease-in-out;
   transform: translateY(50px);
@@ -360,10 +360,14 @@ body {
   font-weight: bold;
 }
 
-.menu-home, .menu-shop {
+.menu-home,
+.menu-shop,
+.menu-page {
   position: relative;
 }
-.menu-home::before, .menu-shop::before {
+.menu-home::before,
+.menu-shop::before,
+.menu-page::before {
   content: " ";
   position: absolute;
   top: 100%;
@@ -385,7 +389,7 @@ body {
   top: 100%;
   padding: 50px 70px;
   display: flex;
-  left: -100%;
+  left: -930%;
   background-color: #ffffff;
   transition: all 0.3s ease-in-out;
   transform: translateY(50px);
@@ -413,12 +417,44 @@ body {
   width: 100px;
 }
 
+.submenupages {
+  padding: 30px 60px 30px 20px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 100%;
+  display: flex;
+  left: 0;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(50px);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+.submenupages-items {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.submenupages-item {
+  width: 80px;
+}
+
+.text-page {
+  color: #363636;
+}
+
 @media (hover: hover) {
-  .submenu-item:hover, .submenu-link:hover {
+  .submenu-item:hover,
+  .submenu-link:hover {
     color: #a53e4c;
     padding-left: 5px;
   }
-  .submenu:hover, .submenushop:hover {
+  .submenu:hover,
+  .submenushop:hover,
+  .submenupages:hover {
     opacity: 1;
     visibility: inherit;
     transition: all 0.2s ease-in-out;
@@ -435,6 +471,15 @@ body {
     visibility: inherit;
     transition: all 0.2s ease-in-out;
     transform: translateY(30px);
+  }
+  .menu-page:hover ~ .submenupages {
+    opacity: 1;
+    visibility: inherit;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(30px);
+  }
+  .menu-item:hover > a {
+    color: #a53e4c;
   }
 }
 .welcome {
